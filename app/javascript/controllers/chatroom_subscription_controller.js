@@ -5,13 +5,13 @@ export default class extends Controller {
   static values = { chatroomId: Number, currentUserId: Number }
   static targets = ["messages"]
 
-  connect() {
-    console.log(`Connecting to the ActionCable channel with id ${this.chatroomIdValue}`)
-    this.channel = createConsumer().subscriptions.create(
-      { channel: "ChatroomChannel", id: this.chatroomIdValue },
-      { received: (data) => { this.#insertMessageAndScrollDown(data) } }
-    )
-  }
+  // connect() {
+  //   console.log(`Connecting to the ActionCable channel with id ${this.chatroomIdValue}`)
+  //   this.channel = createConsumer().subscriptions.create(
+  //     { channel: "ChatroomChannel", id: this.chatroomIdValue },
+  //     { received: (data) => { this.#insertMessageAndScrollDown(data) } }
+  //   )
+  // }
 
   resetForm(event) {
     event.target.reset()
