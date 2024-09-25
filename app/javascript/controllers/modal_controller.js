@@ -37,6 +37,9 @@ export default class extends Controller {
   closeFourthModal() {
     this.fourthModalTarget.style.display = "none";
   }
+  closeFifthModal() {
+    this.fourthModalTarget.style.display = "none";
+  }
   closeMedalModal() {
     this.medalModalTarget.style.display = "none";
   }
